@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "sre_resource",
+	"version": "${version}",
+	"name": "StarRail Express Resources!",
+	"description": "",
+	"authors": [
+		"wifi-left",
+		"catmoon",
+		"haiman233"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/sre_res/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.sre.skins.StarRailExpressItemSkinMod"
+		]
+	},
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
