@@ -18,7 +18,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.sre.skins.StarRailExpressItemSkinMod"
+			"io.sre.resource_lib.SREResource"
 		]
 	},
 	"depends": {
