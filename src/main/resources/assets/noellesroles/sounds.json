@@ -56,6 +56,15 @@
 		],
 		"subtitle": "subtitles.noellesroles.wind"
 	},
+	"noellesroles.who_kill_un_owen": {
+		"sounds": [
+			{
+				"name": "noellesroles:jester/un_owen",
+				"stream": true
+			}
+		],
+		"subtitle": "subtitles.noellesroles.un_owen"
+	},
 	"noellesroles.jester": {
 		"sounds": [
 			{
