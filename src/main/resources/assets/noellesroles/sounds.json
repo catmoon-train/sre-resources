@@ -107,5 +107,14 @@
 			}
 		],
 		"subtitle": "subtitles.noellesroles.time_start"
+	},
+	"noellesroles.party_skill": {
+		"sounds": [
+			{
+				"name": "noellesroles:party_skill",
+				"stream": true
+			}
+		],
+		"subtitle": "subtitles.noellesroles.party_skill"
 	}
 }
