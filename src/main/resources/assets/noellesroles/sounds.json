@@ -65,6 +65,15 @@
 		],
 		"subtitle": "subtitles.noellesroles.un_owen"
 	},
+	"noellesroles.nyan_cat": {
+"sounds": [
+			{
+				"name": "noellesroles:nyan_cat",
+				"stream": true
+			}
+		],
+		"subtitle": "subtitles.noellesroles.nyan_cat"
+	},
 	"noellesroles.jester": {
 		"sounds": [
 			{
