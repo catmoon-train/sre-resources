@@ -125,5 +125,46 @@
 			}
 		],
 		"subtitle": "subtitles.noellesroles.party_skill"
+	},
+	
+	"music_disc.lava_chicken_cut": {
+		"sounds": [
+			{
+				"name": "noellesroles:singer_records/lava_chicken_cutted",
+				"stream": true
+			}
+		]
+	},
+	"music_disc.creator_cut": {
+		"sounds": [
+			{
+				"name": "noellesroles:singer_records/creator_cutted",
+				"stream": true
+			}
+		]
+	},
+	"music_disc.broken_moon": {
+		"sounds": [
+			{
+				"name": "noellesroles:singer_records/broken_moon",
+				"stream": true
+			}
+		]
+	},
+	"music_disc.pigstep_cut": {
+		"sounds": [
+			{
+				"name": "noellesroles:singer_records/pig_step_cutted",
+				"stream": true
+			}
+		]
+	},
+	"music_disc.lupinus": {
+		"sounds": [
+			{
+				"name": "noellesroles:singer_records/lupinus",
+				"stream": true
+			}
+		]
 	}
 }
