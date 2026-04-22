@@ -134,6 +134,24 @@
     ],
     "subtitle": "subtitles.noellesroles.party_skill"
   },
+  "noellesroles.shotgun_fire": {
+    "sounds": [
+      {
+        "name": "noellesroles:shotgun_fire",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.shotgun_fire"
+  },
+  "noellesroles.short_circuit": {
+    "sounds": [
+      {
+        "name": "noellesroles:short_circuit",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.short_circuit"
+  },
   "music_disc.lava_chicken_cut": {
     "sounds": [
       {
