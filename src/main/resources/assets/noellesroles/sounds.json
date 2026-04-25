@@ -143,6 +143,15 @@
     ],
     "subtitle": "subtitles.noellesroles.shotgun_fire"
   },
+  "noellesroles.shotgun_cock": {
+    "sounds": [
+      {
+        "name": "noellesroles:shotgun_cock",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.shotgun_cock"
+  },
   "noellesroles.short_circuit": {
     "sounds": [
       {
