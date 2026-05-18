@@ -25,20 +25,20 @@ public class MathCommands {
                     return null;
                 }).executes((ctx) -> {
                     String exp = StringArgumentType.getString(ctx, "exp");
-                    int ans = 0;
+                    double ans = 0;
                     try {
                         ans = runExp(exp);
                     } catch (Exception e) {
                         throw createSimpleSyntaxException(e);
                     }
-                    final int result = ans;
+                    final double result = ans;
                     ctx.getSource().sendSuccess(() -> Component.translatable("'%s' = %s", exp, result), false);
-                    return ans;
+                    return (int) ans;
                 })));
     }
 
-    private static int runExp(String string) throws ArithmeticException, IllegalArgumentException {
-        return (int) CALC.evaluate(string);
+    private static double runExp(String string) throws ArithmeticException, IllegalArgumentException {
+        return CALC.evaluate(string);
     }
 
 }
