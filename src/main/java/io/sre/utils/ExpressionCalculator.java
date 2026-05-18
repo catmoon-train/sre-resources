@@ -9,7 +9,7 @@ public class ExpressionCalculator {
     public static void main(String[] args) {
         ExpressionCalculator calc = new ExpressionCalculator();
         String[] tests = {
-                "1+1*(2*3*pow(5,6))<3"
+                "1+1*(2*3*pow(5,6))"
         };
 
         for (String expr : tests) {
@@ -17,7 +17,7 @@ public class ExpressionCalculator {
                 double result = calc.evaluate(expr);
                 System.out.println(expr + " = " + result);
             } catch (Exception e) {
-                System.err.println(expr + " -> 错误: " + e.getMessage());
+                System.err.println(expr + " -> Error: " + e.getMessage());
             }
         }
     }
@@ -97,7 +97,7 @@ public class ExpressionCalculator {
         public double eval() {
             double v = operand.eval();
             if (v < 0 || Math.abs(v - Math.round(v)) > 1e-12)
-                throw new ArithmeticException("阶乘仅支持非负整数: " + v);
+                throw new ArithmeticException("Factorial supports only non-negative integers: " + v);
             long n = Math.round(v);
             long result = 1;
             for (long i = 2; i <= n; i++)
@@ -148,13 +148,13 @@ public class ExpressionCalculator {
                     checkArgCount(1);
                     return Math.exp(arguments.get(0).eval());
                 default:
-                    throw new IllegalArgumentException("未知函数: " + name);
+                    throw new IllegalArgumentException("Unknown function: " + name);
             }
         }
 
         private void checkArgCount(int expected) {
             if (arguments.size() != expected)
-                throw new IllegalArgumentException("函数 " + name + " 需要 " + expected + " 个参数，实际 " + arguments.size());
+                throw new IllegalArgumentException("Function " + name + " requires " + expected + " arguments, but got " + arguments.size());
         }
     }
 
@@ -183,7 +183,7 @@ public class ExpressionCalculator {
                 } else if (isOperatorStart(c)) {
                     parseOperator();
                 } else {
-                    throw new IllegalArgumentException("非法字符: " + c);
+                    throw new IllegalArgumentException("Illegal character: " + c);
                 }
             }
             tokens.add(new Token(TokenType.EOF, ""));
@@ -198,7 +198,7 @@ public class ExpressionCalculator {
                 double val = Double.parseDouble(numStr);
                 tokens.add(new Token(TokenType.NUMBER, val));
             } catch (NumberFormatException e) {
-                throw new IllegalArgumentException("数字格式错误: " + numStr);
+                throw new IllegalArgumentException("Invalid number format: " + numStr);
             }
         }
 
@@ -226,7 +226,7 @@ public class ExpressionCalculator {
                 pos++;
                 return;
             }
-            throw new IllegalArgumentException("未知运算符: " + c);
+            throw new IllegalArgumentException("Unknown operator: " + c);
         }
 
         private boolean isOperatorStart(char c) {
@@ -324,13 +324,13 @@ public class ExpressionCalculator {
             if (check(type, text))
                 advance();
             else
-                throw new IllegalArgumentException("期望 " + text + "，实际 " + current);
+                throw new IllegalArgumentException("Expected " + text + ", but got " + current);
         }
 
         public Expr parse() {
             Expr expr = parseExpression(0);
             if (current.type != TokenType.EOF)
-                throw new IllegalArgumentException("多余 token: " + current);
+                throw new IllegalArgumentException("Extra token: " + current);
             return expr;
         }
 
@@ -387,7 +387,7 @@ public class ExpressionCalculator {
                 case "||":
                     return new BinaryOp(left, right, op, null);
                 default:
-                    throw new IllegalArgumentException("未知二元运算符 " + op);
+                    throw new IllegalArgumentException("Unknown binary operator " + op);
             }
         }
 
@@ -430,14 +430,14 @@ public class ExpressionCalculator {
                     consume(TokenType.SYMBOL, ")");
                     primary = new FunctionCall(name, args);
                 } else {
-                    throw new IllegalArgumentException("不支持变量: " + name);
+                    throw new IllegalArgumentException("Variable not supported: " + name);
                 }
             } else if (check(TokenType.SYMBOL, "(")) {
                 advance();
                 primary = parseExpression(0);
                 consume(TokenType.SYMBOL, ")");
             } else {
-                throw new IllegalArgumentException("意外的 token: " + current);
+                throw new IllegalArgumentException("Unexpected token: " + current);
             }
 
             // 后置阶乘（可多个）
