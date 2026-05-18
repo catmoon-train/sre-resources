@@ -23,6 +23,7 @@ public class MathCommands {
 
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(Commands.literal("math")
+                .requires(ctx -> ctx.hasPermission(2))
                 .then(Commands.argument("exp", StringArgumentType.greedyString()).suggests((ctx, builder) -> {
                     String remaining = builder.getRemaining().toLowerCase(Locale.ROOT);
                     // 函数名带括号建议
