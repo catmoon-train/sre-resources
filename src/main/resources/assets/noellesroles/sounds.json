@@ -161,6 +161,42 @@
     ],
     "subtitle": "subtitles.noellesroles.short_circuit"
   },
+  "noellesroles.syringe_stab": {
+    "sounds": [
+      {
+        "name": "noellesroles:item/syringe_stab",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.syringe_stab"
+  },
+  "noellesroles.role_mine_beep": {
+    "sounds": [
+      {
+        "name": "noellesroles:role_mine_beep",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.role_mine_beep"
+  },
+  "noellesroles.cough": {
+    "sounds": [
+      {
+        "name": "noellesroles:cough",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.cough"
+  },
+  "noellesroles.infect": {
+    "sounds": [
+      {
+        "name": "noellesroles:infect",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.infect"
+  },
   "music_disc.lava_chicken_cut": {
     "sounds": [
       {
