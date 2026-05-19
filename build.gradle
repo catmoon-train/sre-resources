@@ -1,6 +1,10 @@
 plugins {
-	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
-	id 'maven-publish'
+    id 'fabric-loom' version '1.15-SNAPSHOT'
+    id 'maven-publish'
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/sre_lib.accesswidener")
 }
 
 version = project.mod_version
@@ -23,7 +27,6 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.officialMojangMappings()
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modImplementation files("libs/star_rail_express-4.0.0.jar")
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"

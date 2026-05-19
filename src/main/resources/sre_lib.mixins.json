@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "io.sre.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "SuggestionsBuilderAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+  ]
+}

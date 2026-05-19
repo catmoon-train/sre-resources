@@ -21,6 +21,10 @@
 			"io.sre.resource_lib.SREResource"
 		]
 	},
+	"mixins": [
+		"sre_lib.mixins.json"
+	],
+	"accessWidener": "sre_lib.accesswidener",
 	"depends": {
 		"fabricloader": "*",
 		"minecraft": "1.21.1",
