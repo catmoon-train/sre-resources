@@ -197,6 +197,24 @@
     ],
     "subtitle": "subtitles.noellesroles.infect"
   },
+  "noellesroles.c4_beep": {
+    "sounds": [
+      {
+        "name": "noellesroles:c4_beep",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.c4_beep"
+  },
+  "noellesroles.mafia": {
+    "sounds": [
+      {
+        "name": "noellesroles:mafia",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.mafia"
+  },
   "music_disc.lava_chicken_cut": {
     "sounds": [
       {
