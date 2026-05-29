@@ -20,8 +20,6 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
@@ -31,70 +29,47 @@ import net.minecraft.world.entity.player.Player;
 @Environment(EnvType.CLIENT)
 public class VTModePlayerSkin {
     public static Gson GSON = new Gson();
-    public static final List<LocalPlayerSkin> LOCAL_VT_PLAYER_SLIM_SKINS = new ArrayList<>();
-    public static final List<LocalPlayerSkin> LOCAL_VT_PLAYER_WIDE_SKINS = new ArrayList<>();
+    public static final List<LocalPlayerSkin> LOCAL_VT_PLAYER_SKINS = new ArrayList<>();
     public static final HashMap<UUID, LocalPlayerSkin> UID2SKINS = new HashMap<>();
-    private static int skinSlimId = 0;
-    private static int skinWideId = 0;
+    private static int skinId = 0;
 
     public static LocalPlayerSkin getPlayerSkin(Player player) {
-        if (UID2SKINS.containsKey(player.getUUID())) {
-            return UID2SKINS.get(player.getUUID());
-        } else {
-            if (player instanceof LocalPlayer lplayer) {
-                return getANewPlayerSkinAndCache(player.getUUID(),
-                        lplayer.getSkin().model().equals(PlayerSkin.Model.SLIM));
-            }
-            return null;
-        }
+        return getPlayerSkin(player.getUUID());
     }
 
     public static LocalPlayerSkin getPlayerSkin(UUID uid) {
         if (UID2SKINS.containsKey(uid)) {
             return UID2SKINS.get(uid);
         } else {
-            return null;
+            return getANewPlayerSkinAndCache(uid);
         }
     }
 
-    public static LocalPlayerSkin getANewPlayerSkinAndCache(UUID uid, boolean isSlim) {
-        var sk = getAPlayerSkin(isSlim);
+    public static LocalPlayerSkin getANewPlayerSkinAndCache(UUID uid) {
+        var sk = getAPlayerSkin();
         UID2SKINS.put(uid, sk);
         return sk;
     }
 
-    public static LocalPlayerSkin getAPlayerSkin(boolean isSlim) {
-        if (isSlim)
-            return getASlimSkin();
-        return getAWideSkin();
+    public static LocalPlayerSkin getAPlayerSkin() {
+        return getASkin();
     }
 
-    public static LocalPlayerSkin getAWideSkin() {
-        if (LOCAL_VT_PLAYER_WIDE_SKINS.size() == 0) {
+    public static LocalPlayerSkin getASkin() {
+        if (LOCAL_VT_PLAYER_SKINS.size() == 0) {
             return null;
         }
-        if (skinSlimId >= LOCAL_VT_PLAYER_WIDE_SKINS.size()) {
-            skinWideId = 0;
+        if (skinId >= LOCAL_VT_PLAYER_SKINS.size()) {
+            skinId = 0;
         }
-        LocalPlayerSkin result = LOCAL_VT_PLAYER_WIDE_SKINS.get(skinWideId);
-        skinWideId++;
-        return result;
-    }
-
-    public static LocalPlayerSkin getASlimSkin() {
-        if (LOCAL_VT_PLAYER_SLIM_SKINS.size() == 0) {
-            return null;
-        }
-        if (skinSlimId >= LOCAL_VT_PLAYER_SLIM_SKINS.size()) {
-            skinSlimId = 0;
-        }
-        LocalPlayerSkin result = LOCAL_VT_PLAYER_SLIM_SKINS.get(skinSlimId);
-        skinSlimId++;
+        LocalPlayerSkin result = LOCAL_VT_PLAYER_SKINS.get(skinId);
+        skinId++;
         return result;
     }
 
     public static void reload() {
-        loadSkinLists();
+        LOCAL_VT_PLAYER_SKINS.clear();
+        LOCAL_VT_PLAYER_SKINS.addAll(loadSkinLists());
     }
 
     public static void init() {
@@ -110,7 +85,7 @@ public class VTModePlayerSkin {
                     if (Minecraft.getInstance().player == null || id == Minecraft.getInstance().player.getUUID())
                         return;
                     UID2SKINS.put(id,
-                            getAPlayerSkin(playerinfo.getSkin().model().equals(PlayerSkin.Model.SLIM)));
+                            getAPlayerSkin());
                 }
             }
         });
