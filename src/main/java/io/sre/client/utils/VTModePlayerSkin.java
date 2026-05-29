@@ -147,7 +147,7 @@ public class VTModePlayerSkin {
                 }
             }
         } catch (Exception e) {
-            SREResource.LOGGER.error("[SRE-RESOURCE] 'starrailexpress/player_skins.json' failed to load.", e);
+            SREResource.LOGGER.error("[SRE-RESOURCE] '"+namespace+"/player_skins.json' failed to load.", e);
         }
         return List.of();
     }
@@ -163,7 +163,7 @@ public class VTModePlayerSkin {
         }
         if (results.isEmpty()) {
             SREResource.LOGGER.info(
-                    "Failed to load custom vt-mode player skins! Didn't found any skins. (player_skins.json)",
+                    "No custom vt-mode player skins found!Use default skins. (Defined in '<namespace>/player_skins.json' in your resource pack)",
                     results.size());
             return getDefaultSkins();
         }
