@@ -163,7 +163,7 @@ public class VTModePlayerSkin {
         }
         if (results.isEmpty()) {
             SREResource.LOGGER.info(
-                    "No custom vt-mode player skins found!Use default skins. (Defined in '<namespace>/player_skins.json' in your resource pack)",
+                    "No custom vt-mode player skins found! Use default skins. (Defined in '<namespace>/player_skins.json' in your resource pack)",
                     results.size());
             return getDefaultSkins();
         }
