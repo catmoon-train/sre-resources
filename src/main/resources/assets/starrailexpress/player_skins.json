@@ -1,74 +1,74 @@
 [
     {
-        "path": "minecraft/textures/entity/player/slim/alex.png",
+        "path": "minecraft:textures/entity/player/slim/alex.png",
         "is_slim": true
     },
     {
-        "path": "minecraft/textures/entity/player/slim/ari.png",
+        "path": "minecraft:textures/entity/player/slim/ari.png",
         "is_slim": true
     },
     {
-        "path": "minecraft/textures/entity/player/slim/efe.png",
+        "path": "minecraft:textures/entity/player/slim/efe.png",
         "is_slim": true
     },
     {
-        "path": "minecraft/textures/entity/player/slim/kai.png",
+        "path": "minecraft:textures/entity/player/slim/kai.png",
         "is_slim": true
     },
     {
-        "path": "minecraft/textures/entity/player/slim/makena.png",
+        "path": "minecraft:textures/entity/player/slim/makena.png",
         "is_slim": true
     },
     {
-        "path": "minecraft/textures/entity/player/slim/noor.png",
+        "path": "minecraft:textures/entity/player/slim/noor.png",
         "is_slim": true
     },
     {
-        "path": "minecraft/textures/entity/player/slim/steve.png",
+        "path": "minecraft:textures/entity/player/slim/steve.png",
         "is_slim": true
     },
     {
-        "path": "minecraft/textures/entity/player/slim/sunny.png",
+        "path": "minecraft:textures/entity/player/slim/sunny.png",
         "is_slim": true
     },
     {
-        "path": "minecraft/textures/entity/player/slim/zuri.png",
+        "path": "minecraft:textures/entity/player/slim/zuri.png",
         "is_slim": true
     },
     {
-        "path": "minecraft/textures/entity/player/wide/alex.png",
+        "path": "minecraft:textures/entity/player/wide/alex.png",
         "is_slim": false
     },
     {
-        "path": "minecraft/textures/entity/player/wide/ari.png",
+        "path": "minecraft:textures/entity/player/wide/ari.png",
         "is_slim": false
     },
     {
-        "path": "minecraft/textures/entity/player/wide/efe.png",
+        "path": "minecraft:textures/entity/player/wide/efe.png",
         "is_slim": false
     },
     {
-        "path": "minecraft/textures/entity/player/wide/kai.png",
+        "path": "minecraft:textures/entity/player/wide/kai.png",
         "is_slim": false
     },
     {
-        "path": "minecraft/textures/entity/player/wide/makena.png",
+        "path": "minecraft:textures/entity/player/wide/makena.png",
         "is_slim": false
     },
     {
-        "path": "minecraft/textures/entity/player/wide/noor.png",
+        "path": "minecraft:textures/entity/player/wide/noor.png",
         "is_slim": false
     },
     {
-        "path": "minecraft/textures/entity/player/wide/steve.png",
+        "path": "minecraft:textures/entity/player/wide/steve.png",
         "is_slim": false
     },
     {
-        "path": "minecraft/textures/entity/player/wide/sunny.png",
+        "path": "minecraft:textures/entity/player/wide/sunny.png",
         "is_slim": false
     },
     {
-        "path": "minecraft/textures/entity/player/wide/zuri.png",
+        "path": "minecraft:textures/entity/player/wide/zuri.png",
         "is_slim": false
     }
 ]
