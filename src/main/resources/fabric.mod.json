@@ -19,6 +19,9 @@
 	"entrypoints": {
 		"main": [
 			"io.sre.resource_lib.SREResource"
+		],
+		"client": [
+			"io.sre.client.SREResourceClient"
 		]
 	},
 	"mixins": [

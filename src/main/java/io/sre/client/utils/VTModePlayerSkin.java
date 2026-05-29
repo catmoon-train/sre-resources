@@ -1,0 +1,204 @@
+package io.sre.client.utils;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.UUID;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+
+import io.sre.client.events.ClientPlayerInfoUpdatePacketEvents;
+import io.sre.resource_lib.SREResource;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.resources.PlayerSkin;
+import net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.Resource;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.world.entity.player.Player;
+
+@Environment(EnvType.CLIENT)
+public class VTModePlayerSkin {
+    public static Gson GSON = new Gson();
+    public static final List<LocalPlayerSkin> LOCAL_VT_PLAYER_SLIM_SKINS = new ArrayList<>();
+    public static final List<LocalPlayerSkin> LOCAL_VT_PLAYER_WIDE_SKINS = new ArrayList<>();
+    public static final HashMap<UUID, LocalPlayerSkin> UID2SKINS = new HashMap<>();
+    private static int skinSlimId = 0;
+    private static int skinWideId = 0;
+
+    public static LocalPlayerSkin getPlayerSkin(Player player) {
+        if (UID2SKINS.containsKey(player.getUUID())) {
+            return UID2SKINS.get(player.getUUID());
+        } else {
+            if (player instanceof LocalPlayer lplayer) {
+                return getANewPlayerSkinAndCache(player.getUUID(),
+                        lplayer.getSkin().model().equals(PlayerSkin.Model.SLIM));
+            }
+            return null;
+        }
+    }
+
+    public static LocalPlayerSkin getPlayerSkin(UUID uid) {
+        if (UID2SKINS.containsKey(uid)) {
+            return UID2SKINS.get(uid);
+        } else {
+            return null;
+        }
+    }
+
+    public static LocalPlayerSkin getANewPlayerSkinAndCache(UUID uid, boolean isSlim) {
+        var sk = getAPlayerSkin(isSlim);
+        UID2SKINS.put(uid, sk);
+        return sk;
+    }
+
+    public static LocalPlayerSkin getAPlayerSkin(boolean isSlim) {
+        if (isSlim)
+            return getASlimSkin();
+        return getAWideSkin();
+    }
+
+    public static LocalPlayerSkin getAWideSkin() {
+        if (LOCAL_VT_PLAYER_WIDE_SKINS.size() == 0) {
+            return null;
+        }
+        if (skinSlimId >= LOCAL_VT_PLAYER_WIDE_SKINS.size()) {
+            skinWideId = 0;
+        }
+        LocalPlayerSkin result = LOCAL_VT_PLAYER_WIDE_SKINS.get(skinWideId);
+        skinWideId++;
+        return result;
+    }
+
+    public static LocalPlayerSkin getASlimSkin() {
+        if (LOCAL_VT_PLAYER_SLIM_SKINS.size() == 0) {
+            return null;
+        }
+        if (skinSlimId >= LOCAL_VT_PLAYER_SLIM_SKINS.size()) {
+            skinSlimId = 0;
+        }
+        LocalPlayerSkin result = LOCAL_VT_PLAYER_SLIM_SKINS.get(skinSlimId);
+        skinSlimId++;
+        return result;
+    }
+
+    public static void reload() {
+        loadSkinLists();
+    }
+
+    public static void init() {
+        reload();
+        registerEvents();
+    }
+
+    private static void registerEvents() {
+        ClientPlayerInfoUpdatePacketEvents.UPDATE.register((action, playerinfo) -> {
+            if (action.contains(ClientboundPlayerInfoUpdatePacket.Action.ADD_PLAYER)) {
+                if (playerinfo.getProfile() != null && playerinfo.getSkin() != null) {
+                    var id = playerinfo.getProfile().getId();
+                    if (Minecraft.getInstance().player == null || id == Minecraft.getInstance().player.getUUID())
+                        return;
+                    UID2SKINS.put(id,
+                            getAPlayerSkin(playerinfo.getSkin().model().equals(PlayerSkin.Model.SLIM)));
+                }
+            }
+        });
+        ClientPlayerInfoUpdatePacketEvents.REMOVE.register((uuids) -> {
+            if (uuids == null)
+                return;
+            for (var uid : uuids) {
+                UID2SKINS.remove(uid);
+            }
+        });
+        ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
+            UID2SKINS.clear();
+        });
+    }
+
+    public static class LocalPlayerSkin {
+        public String path;
+        public boolean is_slim;
+
+        public LocalPlayerSkin(String path, boolean is_slim) {
+            this.path = path;
+            this.is_slim = is_slim;
+        }
+    }
+
+    final static String LIST_FILE_NAME = "player_skins.json";
+
+    private static List<LocalPlayerSkin> loadSkinList(Minecraft minecraft, String namespace) {
+        ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(namespace, LIST_FILE_NAME);
+        List<LocalPlayerSkin> results = new ArrayList<>();
+        try {
+            Optional<Resource> res = minecraft.getResourceManager().getResource(loc);
+            if (res.isPresent()) {
+                try (InputStream is = res.get().open();
+                        InputStreamReader reader = new InputStreamReader(is, StandardCharsets.UTF_8)) {
+                    JsonArray jsonArray = GSON.fromJson(reader, JsonArray.class);
+                    results.clear();
+                    for (JsonElement ele : jsonArray) {
+                        results.add(GSON.fromJson(ele, LocalPlayerSkin.class));
+                    }
+                    return results;
+                }
+            }
+        } catch (Exception e) {
+            SREResource.LOGGER.error("[SRE-RESOURCE] 'starrailexpress/player_skins.json' failed to load.", e);
+        }
+        return List.of();
+    }
+
+    private static List<LocalPlayerSkin> loadSkinLists() {
+        SREResource.LOGGER.info("Loading custom vt-mode player skins...");
+        final Minecraft minecraft = Minecraft.getInstance();
+        final ResourceManager manager = minecraft.getResourceManager();
+        Set<String> namespaces = manager.getNamespaces();
+        List<LocalPlayerSkin> results = new ArrayList<>();
+        for (String namespace : namespaces) {
+            results.addAll(loadSkinList(minecraft, namespace));
+        }
+        if (results.isEmpty()) {
+            SREResource.LOGGER.info(
+                    "Failed to load custom vt-mode player skins! Didn't found any skins. (player_skins.json)",
+                    results.size());
+            return getDefaultSkins();
+        }
+        SREResource.LOGGER.info("Loaded custom vt-mode player skins Successfully! Found {} skins.", results.size());
+
+        return results;
+    }
+
+    private static List<LocalPlayerSkin> getDefaultSkins() {
+        return List.of(
+                new LocalPlayerSkin("minecraft/textures/entity/player/slim/alex.png", false),
+                new LocalPlayerSkin("minecraft/textures/entity/player/slim/ari.png", false),
+                new LocalPlayerSkin("minecraft/textures/entity/player/slim/efe.png", false),
+                new LocalPlayerSkin("minecraft/textures/entity/player/slim/kai.png", false),
+                new LocalPlayerSkin("minecraft/textures/entity/player/slim/makena.png", false),
+                new LocalPlayerSkin("minecraft/textures/entity/player/slim/noor.png", false),
+                new LocalPlayerSkin("minecraft/textures/entity/player/slim/steve.png", false),
+                new LocalPlayerSkin("minecraft/textures/entity/player/slim/sunny.png", false),
+                new LocalPlayerSkin("minecraft/textures/entity/player/slim/zuri.png", false),
+                new LocalPlayerSkin("minecraft/textures/entity/player/wide/alex.png", true),
+                new LocalPlayerSkin("minecraft/textures/entity/player/wide/ari.png", true),
+                new LocalPlayerSkin("minecraft/textures/entity/player/wide/efe.png", true),
+                new LocalPlayerSkin("minecraft/textures/entity/player/wide/kai.png", true),
+                new LocalPlayerSkin("minecraft/textures/entity/player/wide/makena.png", true),
+                new LocalPlayerSkin("minecraft/textures/entity/player/wide/noor.png", true),
+                new LocalPlayerSkin("minecraft/textures/entity/player/wide/steve.png", true),
+                new LocalPlayerSkin("minecraft/textures/entity/player/wide/sunny.png", true),
+                new LocalPlayerSkin("minecraft/textures/entity/player/wide/zuri.png", true));
+    }
+}

@@ -31,7 +31,6 @@ public class MathCommands {
                 .then(Commands.argument("exp", StringArgumentType.greedyString()).suggests((ctx, builder) -> {
                     // 通过 accessor 获取 result 列表
                     List<Suggestion> result = ((SuggestionsBuilderAccessor) builder).getResult();
-                    String fullInput = builder.getInput();
                     int cursorStart = builder.getStart(); // 参数起始索引
                     String remaining = builder.getRemaining(); // 光标后到末尾的字符串
                     int cursorAbsolute = cursorStart + remaining.length(); // 光标绝对位置（就在 remaining 末尾）

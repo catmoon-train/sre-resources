@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +33,9 @@ public class SREResource implements ModInitializer {
             }));
             MathCommands.register(dispatcher);
         });
+    }
 
+    public static ResourceLocation SREId(String string) {
+        return ResourceLocation.fromNamespaceAndPath("starrailexpress", string);
     }
 }
