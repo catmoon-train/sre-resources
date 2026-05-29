@@ -80,10 +80,8 @@ public class VTModePlayerSkin {
     private static void registerEvents() {
         ClientPlayerInfoUpdatePacketEvents.UPDATE.register((action, playerinfo) -> {
             if (action.contains(ClientboundPlayerInfoUpdatePacket.Action.ADD_PLAYER)) {
-                if (playerinfo.getProfile() != null && playerinfo.getSkin() != null) {
+                if (playerinfo.getProfile() != null) {
                     var id = playerinfo.getProfile().getId();
-                    if (Minecraft.getInstance().player == null || id == Minecraft.getInstance().player.getUUID())
-                        return;
                     UID2SKINS.put(id,
                             getAPlayerSkin());
                 }
