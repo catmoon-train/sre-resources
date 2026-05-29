@@ -176,23 +176,23 @@ public class VTModePlayerSkin {
 
     private static List<LocalPlayerSkin> getDefaultSkins() {
         return List.of(
-                new LocalPlayerSkin("minecraft/textures/entity/player/slim/alex.png", false),
-                new LocalPlayerSkin("minecraft/textures/entity/player/slim/ari.png", false),
-                new LocalPlayerSkin("minecraft/textures/entity/player/slim/efe.png", false),
-                new LocalPlayerSkin("minecraft/textures/entity/player/slim/kai.png", false),
-                new LocalPlayerSkin("minecraft/textures/entity/player/slim/makena.png", false),
-                new LocalPlayerSkin("minecraft/textures/entity/player/slim/noor.png", false),
-                new LocalPlayerSkin("minecraft/textures/entity/player/slim/steve.png", false),
-                new LocalPlayerSkin("minecraft/textures/entity/player/slim/sunny.png", false),
-                new LocalPlayerSkin("minecraft/textures/entity/player/slim/zuri.png", false),
-                new LocalPlayerSkin("minecraft/textures/entity/player/wide/alex.png", true),
-                new LocalPlayerSkin("minecraft/textures/entity/player/wide/ari.png", true),
-                new LocalPlayerSkin("minecraft/textures/entity/player/wide/efe.png", true),
-                new LocalPlayerSkin("minecraft/textures/entity/player/wide/kai.png", true),
-                new LocalPlayerSkin("minecraft/textures/entity/player/wide/makena.png", true),
-                new LocalPlayerSkin("minecraft/textures/entity/player/wide/noor.png", true),
-                new LocalPlayerSkin("minecraft/textures/entity/player/wide/steve.png", true),
-                new LocalPlayerSkin("minecraft/textures/entity/player/wide/sunny.png", true),
-                new LocalPlayerSkin("minecraft/textures/entity/player/wide/zuri.png", true));
+                new LocalPlayerSkin("minecraft:textures/entity/player/slim/alex.png", false),
+                new LocalPlayerSkin("minecraft:textures/entity/player/slim/ari.png", false),
+                new LocalPlayerSkin("minecraft:textures/entity/player/slim/efe.png", false),
+                new LocalPlayerSkin("minecraft:textures/entity/player/slim/kai.png", false),
+                new LocalPlayerSkin("minecraft:textures/entity/player/slim/makena.png", false),
+                new LocalPlayerSkin("minecraft:textures/entity/player/slim/noor.png", false),
+                new LocalPlayerSkin("minecraft:textures/entity/player/slim/steve.png", false),
+                new LocalPlayerSkin("minecraft:textures/entity/player/slim/sunny.png", false),
+                new LocalPlayerSkin("minecraft:textures/entity/player/slim/zuri.png", false),
+                new LocalPlayerSkin("minecraft:textures/entity/player/wide/alex.png", true),
+                new LocalPlayerSkin("minecraft:textures/entity/player/wide/ari.png", true),
+                new LocalPlayerSkin("minecraft:textures/entity/player/wide/efe.png", true),
+                new LocalPlayerSkin("minecraft:textures/entity/player/wide/kai.png", true),
+                new LocalPlayerSkin("minecraft:textures/entity/player/wide/makena.png", true),
+                new LocalPlayerSkin("minecraft:textures/entity/player/wide/noor.png", true),
+                new LocalPlayerSkin("minecraft:textures/entity/player/wide/steve.png", true),
+                new LocalPlayerSkin("minecraft:textures/entity/player/wide/sunny.png", true),
+                new LocalPlayerSkin("minecraft:textures/entity/player/wide/zuri.png", true));
     }
 }
