@@ -28,7 +28,7 @@ public abstract class ClientPacketListenerMixin {
     @Inject(method = "handlePlayerInfoUpdate", at = @At("TAIL"))
     private void onPlayerInfoUpdate(ClientboundPlayerInfoUpdatePacket packet, CallbackInfo ci) {
 
-        for (ClientboundPlayerInfoUpdatePacket.Entry entry : packet.entries()) {
+        for (ClientboundPlayerInfoUpdatePacket.Entry entry : packet.newEntries()) {
             PlayerInfo playerInfo = new PlayerInfo((GameProfile) Objects.requireNonNull(entry.profile()),
                     this.enforcesSecureChat());
             ClientPlayerInfoUpdatePacketEvents.UPDATE.invoker().onPlayerInfoUpdated(packet.actions(), playerInfo);
@@ -40,6 +40,9 @@ public abstract class ClientPacketListenerMixin {
      */
     @Inject(method = "handlePlayerInfoRemove", at = @At("TAIL"))
     private void onPlayerInfoRemove(ClientboundPlayerInfoRemovePacket packet, CallbackInfo ci) {
-        ClientPlayerInfoUpdatePacketEvents.REMOVE.invoker().onPlayerInfosRemoved(packet.profileIds());
+        var uuids = packet.profileIds();
+        if (uuids == null)
+            return;
+        ClientPlayerInfoUpdatePacketEvents.REMOVE.invoker().onPlayerInfosRemoved(uuids);
     }
 }
