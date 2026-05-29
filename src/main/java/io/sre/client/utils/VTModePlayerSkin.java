@@ -20,6 +20,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
@@ -108,6 +109,23 @@ public class VTModePlayerSkin {
         public LocalPlayerSkin(String path, boolean is_slim) {
             this.path = path;
             this.is_slim = is_slim;
+        }
+
+        /**
+         * 将当前 LocalPlayerSkin 对象转换为 Minecraft 原生的 PlayerSkin 对象。
+         * 
+         * @return 转换后的 PlayerSkin 实例，如果路径无效则返回 null（或根据需求处理）
+         */
+        public PlayerSkin toPlayerSkin() {
+            try {
+                ResourceLocation textureLocation = ResourceLocation.parse(path);
+                PlayerSkin.Model model = is_slim ? PlayerSkin.Model.SLIM : PlayerSkin.Model.WIDE;
+                // 构造 PlayerSkin：纹理位置，纹理URL(null)，披风(null)，鞘翅(null)，模型，是否安全(false)
+                return new PlayerSkin(textureLocation, null, null, null, model, false);
+            } catch (Exception e) {
+                // 路径解析失败时的降级处理，可根据需要改为抛出异常或返回默认皮肤
+                return null;
+            }
         }
     }
 
