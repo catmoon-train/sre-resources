@@ -74,7 +74,6 @@ public class VTModePlayerSkin {
     }
 
     public static void init() {
-        reload();
         registerEvents();
     }
 
