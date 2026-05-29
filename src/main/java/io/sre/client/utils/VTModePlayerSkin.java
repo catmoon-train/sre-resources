@@ -108,17 +108,21 @@ public class VTModePlayerSkin {
             this.is_slim = is_slim;
         }
 
+        public PlayerSkin toPlayerSkin() {
+            return toPlayerSkin(true);
+        }
+
         /**
          * 将当前 LocalPlayerSkin 对象转换为 Minecraft 原生的 PlayerSkin 对象。
          * 
          * @return 转换后的 PlayerSkin 实例，如果路径无效则返回 null（或根据需求处理）
          */
-        public PlayerSkin toPlayerSkin() {
+        public PlayerSkin toPlayerSkin(boolean secure) {
             try {
                 ResourceLocation textureLocation = ResourceLocation.parse(path);
                 PlayerSkin.Model model = is_slim ? PlayerSkin.Model.SLIM : PlayerSkin.Model.WIDE;
                 // 构造 PlayerSkin：纹理位置，纹理URL(null)，披风(null)，鞘翅(null)，模型，是否安全(false)
-                return new PlayerSkin(textureLocation, null, null, null, model, false);
+                return new PlayerSkin(textureLocation, null, null, null, model, secure);
             } catch (Exception e) {
                 // 路径解析失败时的降级处理，可根据需要改为抛出异常或返回默认皮肤
                 return null;
@@ -145,7 +149,7 @@ public class VTModePlayerSkin {
                 }
             }
         } catch (Exception e) {
-            SREResource.LOGGER.error("[SRE-RESOURCE] '"+namespace+"/player_skins.json' failed to load.", e);
+            SREResource.LOGGER.error("[SRE-RESOURCE] '" + namespace + "/player_skins.json' failed to load.", e);
         }
         return List.of();
     }
