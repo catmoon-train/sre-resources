@@ -256,9 +256,11 @@
     ]
   },
   "plush.baka": {
-    "sounds": {
-      "name": "noellesroles:baka",
-      "stream": true
-    }
+    "sounds": [
+      {
+        "name": "noellesroles:baka",
+        "stream": true
+      }
+    ]
   }
 }
