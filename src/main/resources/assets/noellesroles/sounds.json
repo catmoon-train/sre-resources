@@ -262,5 +262,14 @@
         "stream": true
       }
     ]
+  },
+  "noellesroles.level": {
+    "sounds": [
+      {
+        "name": "noellesroles:level",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.level"
   }
 }
