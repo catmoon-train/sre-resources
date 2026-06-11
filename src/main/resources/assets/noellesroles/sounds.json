@@ -258,7 +258,15 @@
   "plush.baka": {
     "sounds": [
       {
-        "name": "noellesroles:baka",
+        "name": "noellesroles:plush/baka",
+        "stream": true
+      }
+    ]
+  },
+  "plush.nai_long": {
+    "sounds": [
+      {
+        "name": "noellesroles:plush/nai_long",
         "stream": true
       }
     ]
