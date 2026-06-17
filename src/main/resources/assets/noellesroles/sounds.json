@@ -279,5 +279,23 @@
       }
     ],
     "subtitle": "subtitles.noellesroles.level"
+  },
+  "noellesroles.dust_storm": {
+    "sounds": [
+      {
+        "name": "noellesroles:dust_storm",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.dust_storm"
+  },
+  "noellesroles.winter_storm": {
+    "sounds": [
+      {
+        "name": "noellesroles:winter_storm",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.winter_storm"
   }
 }
