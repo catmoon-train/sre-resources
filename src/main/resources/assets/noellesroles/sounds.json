@@ -297,5 +297,14 @@
       }
     ],
     "subtitle": "subtitles.noellesroles.winter_storm"
+  },
+  "noellesroles.broken_alarm": {
+    "sounds": [
+      {
+        "name": "noellesroles:broken_alarm",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.broken_alarm"
   }
 }
