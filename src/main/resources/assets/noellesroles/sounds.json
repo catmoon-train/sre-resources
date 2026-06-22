@@ -306,5 +306,14 @@
       }
     ],
     "subtitle": "subtitles.noellesroles.broken_alarm"
+  },
+  "noellesroles.circus_background": {
+    "sounds": [
+      {
+        "name": "noellesroles:circus_background",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.circus_background"
   }
 }
