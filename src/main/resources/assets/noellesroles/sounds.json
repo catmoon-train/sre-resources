@@ -315,5 +315,23 @@
       }
     ],
     "subtitle": "subtitles.noellesroles.circus_background"
+  },
+  "noellesroles.a_meng": {
+    "sounds": [
+      {
+        "name": "noellesroles:a_meng",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.a_meng"
+  },
+  "noellesroles.dasiy_bell": {
+    "sounds": [
+      {
+        "name": "noellesroles:dasiy_bell",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.dasiy_bell"
   }
 }
