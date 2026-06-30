@@ -279,5 +279,59 @@
       }
     ],
     "subtitle": "subtitles.noellesroles.level"
+  },
+  "noellesroles.dust_storm": {
+    "sounds": [
+      {
+        "name": "noellesroles:dust_storm",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.dust_storm"
+  },
+  "noellesroles.winter_storm": {
+    "sounds": [
+      {
+        "name": "noellesroles:winter_storm",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.winter_storm"
+  },
+  "noellesroles.broken_alarm": {
+    "sounds": [
+      {
+        "name": "noellesroles:broken_alarm",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.broken_alarm"
+  },
+  "noellesroles.circus_background": {
+    "sounds": [
+      {
+        "name": "noellesroles:circus_background",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.circus_background"
+  },
+  "noellesroles.a_meng": {
+    "sounds": [
+      {
+        "name": "noellesroles:a_meng",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.a_meng"
+  },
+  "noellesroles.dasiy_bell": {
+    "sounds": [
+      {
+        "name": "noellesroles:dasiy_bell",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.dasiy_bell"
   }
 }
