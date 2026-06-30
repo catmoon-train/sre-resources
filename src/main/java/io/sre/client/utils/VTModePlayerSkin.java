@@ -82,8 +82,10 @@ public class VTModePlayerSkin {
             if (action.contains(ClientboundPlayerInfoUpdatePacket.Action.ADD_PLAYER)) {
                 if (playerinfo.getProfile() != null) {
                     var id = playerinfo.getProfile().getId();
-                    UID2SKINS.put(id,
-                            getAPlayerSkin());
+                    if (!UID2SKINS.containsKey(id)) {
+                        UID2SKINS.put(id,
+                                getAPlayerSkin());
+                    }
                 }
             }
         });
