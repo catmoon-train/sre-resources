@@ -111,7 +111,7 @@
     "sounds": [
       {
         "name": "noellesroles:time_stop",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.time_stop"
@@ -120,7 +120,7 @@
     "sounds": [
       {
         "name": "noellesroles:time_start",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.time_start"
@@ -129,7 +129,7 @@
     "sounds": [
       {
         "name": "noellesroles:party_skill",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.party_skill"
@@ -138,7 +138,7 @@
     "sounds": [
       {
         "name": "noellesroles:shotgun_fire",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.shotgun_fire"
@@ -147,7 +147,7 @@
     "sounds": [
       {
         "name": "noellesroles:shotgun_cock",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.shotgun_cock"
@@ -156,7 +156,7 @@
     "sounds": [
       {
         "name": "noellesroles:short_circuit",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.short_circuit"
@@ -165,7 +165,7 @@
     "sounds": [
       {
         "name": "noellesroles:item/syringe_stab",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.syringe_stab"
@@ -174,7 +174,7 @@
     "sounds": [
       {
         "name": "noellesroles:role_mine_beep",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.role_mine_beep"
@@ -183,7 +183,7 @@
     "sounds": [
       {
         "name": "noellesroles:cough",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.cough"
@@ -192,7 +192,7 @@
     "sounds": [
       {
         "name": "noellesroles:infect",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.infect"
@@ -258,16 +258,14 @@
   "plush.baka": {
     "sounds": [
       {
-        "name": "noellesroles:plush/baka",
-        "stream": true
+        "name": "noellesroles:plush/baka"
       }
     ]
   },
   "plush.nai_long": {
     "sounds": [
       {
-        "name": "noellesroles:plush/nai_long",
-        "stream": true
+        "name": "noellesroles:plush/nai_long"
       }
     ]
   },
@@ -301,8 +299,7 @@
   "noellesroles.broken_alarm": {
     "sounds": [
       {
-        "name": "noellesroles:broken_alarm",
-        "stream": true
+        "name": "noellesroles:broken_alarm"
       }
     ],
     "subtitle": "subtitles.noellesroles.broken_alarm"
