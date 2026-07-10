@@ -1,8 +1,6 @@
 package io.sre.client.utils;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +17,6 @@ import io.sre.resource_lib.SREResource;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket;
 import net.minecraft.resources.ResourceLocation;
@@ -68,9 +65,9 @@ public class VTModePlayerSkin {
         return result;
     }
 
-    public static void reload() {
+    public static void reload(ResourceManager resourceManager) {
         LOCAL_VT_PLAYER_SKINS.clear();
-        LOCAL_VT_PLAYER_SKINS.addAll(loadSkinLists());
+        LOCAL_VT_PLAYER_SKINS.addAll(loadSkinLists(resourceManager));
     }
 
     public static void init() {
@@ -134,14 +131,13 @@ public class VTModePlayerSkin {
 
     final static String LIST_FILE_NAME = "player_skins.json";
 
-    private static List<LocalPlayerSkin> loadSkinList(Minecraft minecraft, String namespace) {
+    private static List<LocalPlayerSkin> loadSkinList(ResourceManager manager, String namespace) {
         ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(namespace, LIST_FILE_NAME);
         List<LocalPlayerSkin> results = new ArrayList<>();
         try {
-            Optional<Resource> res = minecraft.getResourceManager().getResource(loc);
+            Optional<Resource> res = manager.getResource(loc);
             if (res.isPresent()) {
-                try (InputStream is = res.get().open();
-                        InputStreamReader reader = new InputStreamReader(is, StandardCharsets.UTF_8)) {
+                try (BufferedReader reader = res.get().openAsReader()) {
                     JsonArray jsonArray = GSON.fromJson(reader, JsonArray.class);
                     results.clear();
                     for (JsonElement ele : jsonArray) {
@@ -156,14 +152,13 @@ public class VTModePlayerSkin {
         return List.of();
     }
 
-    private static List<LocalPlayerSkin> loadSkinLists() {
+    private static List<LocalPlayerSkin> loadSkinLists(ResourceManager resourceManager) {
         SREResource.LOGGER.info("Loading custom vt-mode player skins...");
-        final Minecraft minecraft = Minecraft.getInstance();
-        final ResourceManager manager = minecraft.getResourceManager();
+        final ResourceManager manager = resourceManager;
         Set<String> namespaces = manager.getNamespaces();
         List<LocalPlayerSkin> results = new ArrayList<>();
         for (String namespace : namespaces) {
-            results.addAll(loadSkinList(minecraft, namespace));
+            results.addAll(loadSkinList(manager, namespace));
         }
         if (results.isEmpty()) {
             SREResource.LOGGER.info(

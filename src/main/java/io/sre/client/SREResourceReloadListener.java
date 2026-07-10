@@ -15,7 +15,7 @@ public class SREResourceReloadListener implements SimpleSynchronousResourceReloa
 
     @Override
     public void onResourceManagerReload(ResourceManager resourceManager) {
-        VTModePlayerSkin.reload();
+        VTModePlayerSkin.reload(resourceManager);
     }
 
 }
