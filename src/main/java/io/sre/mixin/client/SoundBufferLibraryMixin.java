@@ -48,6 +48,6 @@ public abstract class SoundBufferLibraryMixin {
             } catch (IOException e) {
                 throw new CompletionException(e);
             }
-        }, Util.backgroundExecutor()));
+        }, Util.nonCriticalIoPool()));
     }
 }
