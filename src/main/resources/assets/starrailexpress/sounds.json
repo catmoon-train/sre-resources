@@ -203,7 +203,7 @@
 		"sounds": [
 			{
 				"name": "wathe:ambient/psycho_drone",
-				"stream": true
+				"stream": false
 			}
 		],
 		"subtitle": "subtitles.ambient.psycho_drone"

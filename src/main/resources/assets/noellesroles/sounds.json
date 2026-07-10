@@ -15,7 +15,7 @@
     "sounds": [
       {
         "name": "noellesroles:to_be_continued",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.to_be_continued"
@@ -24,7 +24,7 @@
     "sounds": [
       {
         "name": "noellesroles:gongxifacai",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.gongxifacai"
@@ -33,7 +33,7 @@
     "sounds": [
       {
         "name": "noellesroles:dio_spawn",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.dio_spawn"
@@ -42,7 +42,7 @@
     "sounds": [
       {
         "name": "noellesroles:harpy_welcome",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.harpy_welcome"
@@ -51,7 +51,7 @@
     "sounds": [
       {
         "name": "noellesroles:wind",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.wind"
@@ -60,7 +60,7 @@
     "sounds": [
       {
         "name": "noellesroles:jester/un_owen",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.un_owen"
@@ -69,7 +69,7 @@
     "sounds": [
       {
         "name": "noellesroles:nyan_cat",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.nyan_cat"
@@ -78,31 +78,31 @@
     "sounds": [
       {
         "name": "noellesroles:jester/axel_f",
-        "stream": true
+        "stream": false
       },
       {
         "name": "noellesroles:jester/un_owen",
-        "stream": true
+        "stream": false
       },
       {
         "name": "noellesroles:jester/yaosemountain_1",
-        "stream": true
+        "stream": false
       },
       {
         "name": "noellesroles:jester/yaosemountain_2",
-        "stream": true
+        "stream": false
       },
       {
         "name": "noellesroles:jester/zombieempiror_song_1",
-        "stream": true
+        "stream": false
       },
       {
         "name": "noellesroles:jester/zombieempiror_song_2",
-        "stream": true
+        "stream": false
       },
       {
         "name": "noellesroles:jester/shake_and_sway",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.jester"
@@ -210,7 +210,7 @@
     "sounds": [
       {
         "name": "noellesroles:mafia",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.mafia"
@@ -219,7 +219,7 @@
     "sounds": [
       {
         "name": "noellesroles:singer_records/lava_chicken_cutted",
-        "stream": true
+        "stream": false
       }
     ]
   },
@@ -227,7 +227,7 @@
     "sounds": [
       {
         "name": "noellesroles:singer_records/creator_cutted",
-        "stream": true
+        "stream": false
       }
     ]
   },
@@ -235,7 +235,7 @@
     "sounds": [
       {
         "name": "noellesroles:singer_records/broken_moon",
-        "stream": true
+        "stream": false
       }
     ]
   },
@@ -243,7 +243,7 @@
     "sounds": [
       {
         "name": "noellesroles:singer_records/pig_step_cutted",
-        "stream": true
+        "stream": false
       }
     ]
   },
@@ -251,7 +251,7 @@
     "sounds": [
       {
         "name": "noellesroles:singer_records/lupinus",
-        "stream": true
+        "stream": false
       }
     ]
   },
@@ -273,7 +273,7 @@
     "sounds": [
       {
         "name": "noellesroles:level",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.level"
@@ -282,7 +282,7 @@
     "sounds": [
       {
         "name": "noellesroles:dust_storm",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.dust_storm"
@@ -291,7 +291,7 @@
     "sounds": [
       {
         "name": "noellesroles:winter_storm",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.winter_storm"
@@ -308,7 +308,7 @@
     "sounds": [
       {
         "name": "noellesroles:circus_background",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.circus_background"
@@ -317,7 +317,7 @@
     "sounds": [
       {
         "name": "noellesroles:a_meng",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.a_meng"
@@ -326,7 +326,7 @@
     "sounds": [
       {
         "name": "noellesroles:dasiy_bell",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.dasiy_bell"
@@ -335,7 +335,7 @@
     "sounds": [
       {
         "name": "noellesroles:flower_outdoor",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.flower_outdoor"
@@ -344,7 +344,7 @@
     "sounds": [
       {
         "name": "noellesroles:music_indoor",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.music_indoor"
@@ -353,7 +353,7 @@
     "sounds": [
       {
         "name": "noellesroles:odo",
-        "stream": true
+        "stream": false
       }
     ],
     "subtitle": "subtitles.noellesroles.odo"
