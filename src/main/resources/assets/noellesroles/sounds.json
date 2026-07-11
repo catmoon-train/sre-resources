@@ -116,6 +116,15 @@
     ],
     "subtitle": "subtitles.noellesroles.time_stop"
   },
+  "noellesroles.manhunt_chase": {
+    "sounds": [
+      {
+        "name": "noellesroles:manhunt_chase",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.manhunt_chase"
+  },
   "noellesroles.time_start": {
     "sounds": [
       {
