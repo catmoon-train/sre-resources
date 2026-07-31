@@ -82,6 +82,38 @@
       }
     ]
   },
+  "noellesroles.rhythm.yaosemountain_2": {
+    "sounds":  [
+      {
+        "name": "noellesroles:jester/yaosemountain_2",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.rhythm.un_owen": {
+    "sounds":  [
+      {
+        "name": "noellesroles:jester/un_owen",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.rhythm.zombieempiror_song_1": {
+    "sounds":  [
+      {
+        "name": "noellesroles:jester/zombieempiror_song_1",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.rhythm.zombieempiror_song_2": {
+    "sounds":  [
+      {
+        "name": "noellesroles:jester/zombieempiror_song_2",
+        "stream": false
+      }
+    ]
+  },
   "noellesroles.jester": {
     "sounds": [
       {
