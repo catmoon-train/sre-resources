@@ -74,6 +74,14 @@
     ],
     "subtitle": "subtitles.noellesroles.nyan_cat"
   },
+  "noellesroles.rhythm.yaosemountain_1": {
+    "sounds":  [
+      {
+        "name": "noellesroles:jester/yaosemountain_1",
+        "stream": false
+      }
+    ]
+  },
   "noellesroles.jester": {
     "sounds": [
       {
