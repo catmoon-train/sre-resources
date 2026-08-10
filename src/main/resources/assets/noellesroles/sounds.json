@@ -82,26 +82,10 @@
       }
     ]
   },
-  "music.dr_nigula": {
-    "sounds":  [
-      {
-        "name": "noellesroles:music/dr_nigula",
-        "stream": false
-      }
-    ]
-  },
   "music.unwelcome_school": {
     "sounds":  [
       {
         "name": "noellesroles:music/unwelcome_school",
-        "stream": false
-      }
-    ]
-  },
-  "music.yuzu_fun_fun_re_boot": {
-    "sounds":  [
-      {
-        "name": "noellesroles:music/yuzu_fun_fun_re_boot",
         "stream": false
       }
     ]
