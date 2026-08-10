@@ -90,46 +90,6 @@
       }
     ]
   },
-  "music.entrust_this_world_to_idols": {
-    "sounds":  [
-      {
-        "name": "noellesroles:music/entrust_this_world_to_idols",
-        "stream": false
-      }
-    ]
-  },
-  "music.go_towards_night": {
-    "sounds":  [
-      {
-        "name": "noellesroles:music/go_towards_night",
-        "stream": false
-      }
-    ]
-  },
-  "music.idol": {
-    "sounds":  [
-      {
-        "name": "noellesroles:music/idol",
-        "stream": false
-      }
-    ]
-  },
-  "music.maiden_s_capriccio": {
-    "sounds":  [
-      {
-        "name": "noellesroles:music/maiden_s_capriccio",
-        "stream": false
-      }
-    ]
-  },
-  "music.secret_base": {
-    "sounds":  [
-      {
-        "name": "noellesroles:music/secret_base",
-        "stream": false
-      }
-    ]
-  },
   "music.unwelcome_school": {
     "sounds":  [
       {
