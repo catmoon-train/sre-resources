@@ -74,6 +74,86 @@
     ],
     "subtitle": "subtitles.noellesroles.nyan_cat"
   },
+  "music.sakura_moyu": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/sakura_moyu",
+        "stream": false
+      }
+    ]
+  },
+  "music.dr_nigula": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/dr_nigula",
+        "stream": false
+      }
+    ]
+  },
+  "music.entrust_this_world_to_idols": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/entrust_this_world_to_idols",
+        "stream": false
+      }
+    ]
+  },
+  "music.go_towards_night": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/go_towards_night",
+        "stream": false
+      }
+    ]
+  },
+  "music.idol": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/idol",
+        "stream": false
+      }
+    ]
+  },
+  "music.maiden_s_capriccio": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/maiden_s_capriccio",
+        "stream": false
+      }
+    ]
+  },
+  "music.secret_base": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/secret_base",
+        "stream": false
+      }
+    ]
+  },
+  "music.unwelcome_school": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/unwelcome_school",
+        "stream": false
+      }
+    ]
+  },
+  "music.yuzu_fun_fun_re_boot": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/yuzu_fun_fun_re_boot",
+        "stream": false
+      }
+    ]
+  },
+  "music.zenrianbanka": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/zenrianbanka",
+        "stream": false
+      }
+    ]
+  },
   "noellesroles.rhythm.yaosemountain_1": {
     "sounds":  [
       {
