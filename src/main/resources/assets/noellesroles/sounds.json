@@ -59,7 +59,7 @@
   "noellesroles.who_kill_un_owen": {
     "sounds": [
       {
-        "name": "noellesroles:jester/un_owen",
+        "name": "noellesroles:roles/un_owen",
         "stream": false
       }
     ],
@@ -86,6 +86,30 @@
     "sounds":  [
       {
         "name": "noellesroles:music/unwelcome_school",
+        "stream": false
+      }
+    ]
+  },
+  "roles.see_you_again": {
+    "sounds":  [
+      {
+        "name": "noellesroles:roles/see_you_again",
+        "stream": false
+      }
+    ]
+  },
+  "roles.furandoru.final": {
+    "sounds":  [
+      {
+        "name": "noellesroles:roles/un_owen",
+        "stream": false
+      }
+    ]
+  },
+  "roles.remilia": {
+    "sounds":  [
+      {
+        "name": "noellesroles:roles/septette_for_a_dead_princess",
         "stream": false
       }
     ]
@@ -117,7 +141,7 @@
   "noellesroles.rhythm.un_owen": {
     "sounds":  [
       {
-        "name": "noellesroles:jester/un_owen",
+        "name": "noellesroles:roles/un_owen",
         "stream": false
       }
     ]
@@ -145,7 +169,7 @@
         "stream": false
       },
       {
-        "name": "noellesroles:jester/un_owen",
+        "name": "noellesroles:jester/time_luna",
         "stream": false
       },
       {
@@ -170,6 +194,15 @@
       }
     ],
     "subtitle": "subtitles.noellesroles.jester"
+  },
+  "noellesroles.luna_time_clock": {
+    "sounds": [
+      {
+        "name": "noellesroles:jester/time_luna",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.time_stop"
   },
   "noellesroles.time_stop": {
     "sounds": [
