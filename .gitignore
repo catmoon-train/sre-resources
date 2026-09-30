@@ -38,3 +38,6 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# map previews
+src/main/resources/assets/starrailexpress/textures/gui/maps
