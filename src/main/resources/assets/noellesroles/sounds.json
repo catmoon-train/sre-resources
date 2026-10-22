@@ -463,5 +463,29 @@
       }
     ],
     "subtitle": "subtitles.noellesroles.odo"
+  },
+  "noellesroles.daywalker": {
+    "sounds": [
+      {
+        "name": "noellesroles:daywalker",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.mood": {
+    "sounds": [
+      {
+        "name": "noellesroles:mood",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.command_block": {
+    "sounds": [
+      {
+        "name": "noellesroles:command_block",
+        "stream": false
+      }
+    ]
   }
 }
