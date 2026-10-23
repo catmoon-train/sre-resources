@@ -487,5 +487,21 @@
         "stream": false
       }
     ]
+  },
+  "noellesroles.command_block_2": {
+    "sounds": [
+      {
+        "name": "noellesroles:command_block_2",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.command_block_3": {
+    "sounds": [
+      {
+        "name": "noellesroles:command_block_3",
+        "stream": false
+      }
+    ]
   }
 }

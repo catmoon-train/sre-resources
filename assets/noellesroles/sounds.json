@@ -1,0 +1,507 @@
+{
+  "noellesroles.clock": {
+    "sounds": [
+      "noellesroles:clock"
+    ],
+    "subtitle": "subtitles.clock"
+  },
+  "noellesroles.gamber_died": {
+    "sounds": [
+      "noellesroles:gamber_died"
+    ],
+    "subtitle": "subtitles.gamber_died"
+  },
+  "noellesroles.to_be_continued": {
+    "sounds": [
+      {
+        "name": "noellesroles:to_be_continued",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.to_be_continued"
+  },
+  "noellesroles.gongxifacai": {
+    "sounds": [
+      {
+        "name": "noellesroles:gongxifacai",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.gongxifacai"
+  },
+  "noellesroles.dio_spawn": {
+    "sounds": [
+      {
+        "name": "noellesroles:dio_spawn",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.dio_spawn"
+  },
+  "noellesroles.harpy_welcome": {
+    "sounds": [
+      {
+        "name": "noellesroles:harpy_welcome",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.harpy_welcome"
+  },
+  "noellesroles.wind": {
+    "sounds": [
+      {
+        "name": "noellesroles:wind",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.wind"
+  },
+  "noellesroles.who_kill_un_owen": {
+    "sounds": [
+      {
+        "name": "noellesroles:roles/un_owen",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.un_owen"
+  },
+  "noellesroles.nyan_cat": {
+    "sounds": [
+      {
+        "name": "noellesroles:nyan_cat",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.nyan_cat"
+  },
+  "music.sakura_moyu": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/sakura_moyu",
+        "stream": false
+      }
+    ]
+  },
+  "music.unwelcome_school": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/unwelcome_school",
+        "stream": false
+      }
+    ]
+  },
+  "roles.see_you_again": {
+    "sounds":  [
+      {
+        "name": "noellesroles:roles/see_you_again",
+        "stream": false
+      }
+    ]
+  },
+  "roles.furandoru.final": {
+    "sounds":  [
+      {
+        "name": "noellesroles:roles/un_owen",
+        "stream": false
+      }
+    ]
+  },
+  "roles.remilia": {
+    "sounds":  [
+      {
+        "name": "noellesroles:roles/septette_for_a_dead_princess",
+        "stream": false
+      }
+    ]
+  },
+  "music.zenrianbanka": {
+    "sounds":  [
+      {
+        "name": "noellesroles:music/zenrianbanka",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.rhythm.yaosemountain_1": {
+    "sounds":  [
+      {
+        "name": "noellesroles:jester/yaosemountain_1",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.rhythm.yaosemountain_2": {
+    "sounds":  [
+      {
+        "name": "noellesroles:jester/yaosemountain_2",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.rhythm.un_owen": {
+    "sounds":  [
+      {
+        "name": "noellesroles:roles/un_owen",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.rhythm.zombieempiror_song_1": {
+    "sounds":  [
+      {
+        "name": "noellesroles:jester/zombieempiror_song_1",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.rhythm.zombieempiror_song_2": {
+    "sounds":  [
+      {
+        "name": "noellesroles:jester/zombieempiror_song_2",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.jester": {
+    "sounds": [
+      {
+        "name": "noellesroles:jester/axel_f",
+        "stream": false
+      },
+      {
+        "name": "noellesroles:jester/time_luna",
+        "stream": false
+      },
+      {
+        "name": "noellesroles:jester/yaosemountain_1",
+        "stream": false
+      },
+      {
+        "name": "noellesroles:jester/yaosemountain_2",
+        "stream": false
+      },
+      {
+        "name": "noellesroles:jester/zombieempiror_song_1",
+        "stream": false
+      },
+      {
+        "name": "noellesroles:jester/zombieempiror_song_2",
+        "stream": false
+      },
+      {
+        "name": "noellesroles:jester/shake_and_sway",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.jester"
+  },
+  "noellesroles.luna_time_clock": {
+    "sounds": [
+      {
+        "name": "noellesroles:jester/time_luna",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.time_stop"
+  },
+  "noellesroles.time_stop": {
+    "sounds": [
+      {
+        "name": "noellesroles:time_stop",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.time_stop"
+  },
+  "noellesroles.manhunt_chase": {
+    "sounds": [
+      {
+        "name": "noellesroles:manhunt_chase",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.manhunt_chase"
+  },
+  "noellesroles.time_start": {
+    "sounds": [
+      {
+        "name": "noellesroles:time_start",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.time_start"
+  },
+  "noellesroles.party_skill": {
+    "sounds": [
+      {
+        "name": "noellesroles:party_skill",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.party_skill"
+  },
+  "noellesroles.shotgun_fire": {
+    "sounds": [
+      {
+        "name": "noellesroles:shotgun_fire",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.shotgun_fire"
+  },
+  "noellesroles.shotgun_cock": {
+    "sounds": [
+      {
+        "name": "noellesroles:shotgun_cock",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.shotgun_cock"
+  },
+  "noellesroles.short_circuit": {
+    "sounds": [
+      {
+        "name": "noellesroles:short_circuit",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.short_circuit"
+  },
+  "noellesroles.syringe_stab": {
+    "sounds": [
+      {
+        "name": "noellesroles:item/syringe_stab",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.syringe_stab"
+  },
+  "noellesroles.role_mine_beep": {
+    "sounds": [
+      {
+        "name": "noellesroles:role_mine_beep",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.role_mine_beep"
+  },
+  "noellesroles.cough": {
+    "sounds": [
+      {
+        "name": "noellesroles:cough",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.cough"
+  },
+  "noellesroles.infect": {
+    "sounds": [
+      {
+        "name": "noellesroles:infect",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.infect"
+  },
+  "noellesroles.c4_beep": {
+    "sounds": [
+      {
+        "name": "noellesroles:c4_beep",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.c4_beep"
+  },
+  "noellesroles.mafia": {
+    "sounds": [
+      {
+        "name": "noellesroles:mafia",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.mafia"
+  },
+  "music_disc.lava_chicken_cut": {
+    "sounds": [
+      {
+        "name": "noellesroles:singer_records/lava_chicken_cutted",
+        "stream": false
+      }
+    ]
+  },
+  "music_disc.creator_cut": {
+    "sounds": [
+      {
+        "name": "noellesroles:singer_records/creator_cutted",
+        "stream": false
+      }
+    ]
+  },
+  "music_disc.broken_moon": {
+    "sounds": [
+      {
+        "name": "noellesroles:singer_records/broken_moon",
+        "stream": false
+      }
+    ]
+  },
+  "music_disc.pigstep_cut": {
+    "sounds": [
+      {
+        "name": "noellesroles:singer_records/pig_step_cutted",
+        "stream": false
+      }
+    ]
+  },
+  "music_disc.lupinus": {
+    "sounds": [
+      {
+        "name": "noellesroles:singer_records/lupinus",
+        "stream": false
+      }
+    ]
+  },
+  "plush.baka": {
+    "sounds": [
+      {
+        "name": "noellesroles:plush/baka"
+      }
+    ]
+  },
+  "plush.nai_long": {
+    "sounds": [
+      {
+        "name": "noellesroles:plush/nai_long"
+      }
+    ]
+  },
+  "noellesroles.level": {
+    "sounds": [
+      {
+        "name": "noellesroles:level",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.level"
+  },
+  "noellesroles.dust_storm": {
+    "sounds": [
+      {
+        "name": "noellesroles:dust_storm",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.dust_storm"
+  },
+  "noellesroles.winter_storm": {
+    "sounds": [
+      {
+        "name": "noellesroles:winter_storm",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.winter_storm"
+  },
+  "noellesroles.broken_alarm": {
+    "sounds": [
+      {
+        "name": "noellesroles:broken_alarm"
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.broken_alarm"
+  },
+  "noellesroles.circus_background": {
+    "sounds": [
+      {
+        "name": "noellesroles:circus_background",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.circus_background"
+  },
+  "noellesroles.a_meng": {
+    "sounds": [
+      {
+        "name": "noellesroles:a_meng",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.a_meng"
+  },
+  "noellesroles.dasiy_bell": {
+    "sounds": [
+      {
+        "name": "noellesroles:dasiy_bell",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.dasiy_bell"
+  },
+  "noellesroles.flower_outdoor": {
+    "sounds": [
+      {
+        "name": "noellesroles:flower_outdoor",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.flower_outdoor"
+  },
+  "noellesroles.music_indoor": {
+    "sounds": [
+      {
+        "name": "noellesroles:music_indoor",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.music_indoor"
+  },
+  "noellesroles.odo": {
+    "sounds": [
+      {
+        "name": "noellesroles:odo",
+        "stream": false
+      }
+    ],
+    "subtitle": "subtitles.noellesroles.odo"
+  },
+  "noellesroles.daywalker": {
+    "sounds": [
+      {
+        "name": "noellesroles:daywalker",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.mood": {
+    "sounds": [
+      {
+        "name": "noellesroles:mood",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.command_block": {
+    "sounds": [
+      {
+        "name": "noellesroles:command_block",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.command_block_2": {
+    "sounds": [
+      {
+        "name": "noellesroles:command_block_2",
+        "stream": false
+      }
+    ]
+  },
+  "noellesroles.command_block_3": {
+    "sounds": [
+      {
+        "name": "noellesroles:command_block_3",
+        "stream": false
+      }
+    ]
+  }
+}
