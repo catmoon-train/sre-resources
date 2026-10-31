@@ -122,6 +122,14 @@
       }
     ]
   },
+  "music.halloween_music": {
+    "sounds":  [
+      {
+        "name": "noellesroles:sounds/halloween_music",
+        "stream": false
+      }
+    ]
+  },
   "noellesroles.rhythm.yaosemountain_1": {
     "sounds":  [
       {
